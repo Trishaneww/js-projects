@@ -18,6 +18,9 @@ const add = (num1, num2) => {
 add(num1, num2)
 
 // function to display concatenated pjrase on browser
+
+
+
 const myFunction = () => {
     let sentence = "I am learning" 
     sentence += " a lot from thhis book"
