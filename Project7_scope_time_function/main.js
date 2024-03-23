@@ -29,10 +29,10 @@ let age = 5 //global variable
 
  time_function()
 
- const err_func = () => {
-    if 10 > 5 { //will produce a error (must add brackets around statement)
-        console.log("hello world")
-    } else {
-        console.log("hello")
-    }
- }
+//  const err_func = () => {
+//     if 10 > 5 { //will produce a error (must add brackets around statement)
+//         console.log("hello world")
+//     } else {
+//         console.log("hello")
+//     }
+//  }
