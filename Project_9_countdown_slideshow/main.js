@@ -1,11 +1,12 @@
-const timer =  document.querySelector('#timer');
+
 
 function countdown () { 
+    const timer =  document.querySelector('#timer');
     let seconds = document.getElementById("seconds").value;
     function tick() {
-        seconds = seconds
+        seconds = seconds - 1;
         timer.innerHTML = seconds;  
-        var time = setTimeout (tick, 1000);
+        let time = setTimeout (tick, 1000);
         if(seconds == -1 ) {
             alert("Times up");
             clearTimeout(time);
