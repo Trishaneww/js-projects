@@ -5,9 +5,9 @@ function placeXorO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
-            select.style.backgroundImage = 'url("images/x.png)';
+            select.style.backgroundImage = 'url("images/x.png")';
         } else {
-            select.style.backgroundImage = 'url("images/o.png)';
+            select.style.backgroundImage = 'url("images/o.png")';
         }
 
         selectedSquares.push(squareNumber + activePlayer);
@@ -63,15 +63,15 @@ function checkWinConditions() {
         audio('./media/tie.mp3');
         setTimeout(function() { resetGame()}, 500);
     }
+    // this function checks if an array includes 3 strings
+    function arrayIncludes(squareA, squareB, squareC) {
+        const a = selectedSquares.includes(squareA);
+        const b = selectedSquares.includes(squareB);
+        const c = selectedSquares.includes(squareC);
+        if (a === true && b === true && c === true) { return true; }
+    }
 }
 
-// this function checks if an array includes 3 strings
-function arrayIncludes(squareA, squareB, squareC) {
-    const a = selectedSquares.includes(squareA);
-    const b = selectedSquares.includes(squareB);
-    const c = selectedSquares.includes(squareC);
-    if (a === true && b === true && c === true) { return true; }
-}
 
 function disableClick() {
     body.style.pointerEvents = 'none';
