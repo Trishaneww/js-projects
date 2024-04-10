@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <script>
         $(document).ready(function() {
@@ -9,10 +9,10 @@
                 "<body>\
                     <div id='container'>\
                         <div id='inner'>\
-                        <h1>basic jquery</h1>\
-                        <p id='1'> Paragraph</p>\
-                        <p id='2'> Paragraph</p>\
-                        <p id='3'> Paragraph</p>\
+                            <h1>basic jquery</h1>\
+                            <p id='1'> Paragraph</p>\
+                            <p id='2'> Paragraph</p>\
+                            <p id='3'> Paragraph</p>\
                         </div>\
                     </div>\
                 </body>"
@@ -21,6 +21,10 @@
             $("#3").click(function() {
                 $("h1").hide();
             })
-        })
+            $("p").click(function() {
+                console.log( "You clicked a paragraph!" );
+            });
+            $( "p" ).hide( 500 );
+        });
     </script>
 </html>
