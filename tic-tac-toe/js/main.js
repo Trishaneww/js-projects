@@ -100,7 +100,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
 
     // function to interact with the canvas
     function animateLineDrawing() {
-        const animationLoop =  requestAnimtionFrame(animateLineDrawing);
+        const animationLoop =  requestAnimationFrame(animateLineDrawing);
         // clears content from last loop
         c.clearRect(0, 0, 608, 608);
         //starts a new path
@@ -133,13 +133,13 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         // starts animation loop
         const animationLoop = requestAnimationFrame(clear);
         // clears canvas
-        c.cleatRect(0, 0, 608, 608);
+        c.clearRect(0, 0, 608, 608);
         cancelAnimationFrame(animationLoop);
     }
     // disables clicking while the win sound is playing
     disableClick()
     // plays the win sound
-    audio('./media.winGame.mp3');
+    audio('./media/winGame.mp3');
     // calls main animation loop
     animateLineDrawing();
     // resets canvas after a second
